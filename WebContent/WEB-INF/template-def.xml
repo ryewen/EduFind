@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+  
+  
+<tiles-definitions>  
+	  <definition name="template" template="/WEB-INF/views/tiles/mainTemplate.jsp">
+	  	<put-attribute name="title" value="" />
+	    <put-attribute name="left" value="/WEB-INF/views/tiles/left.jsp" />
+	    <put-attribute name="right" value="/WEB-INF/views/tiles/right.jsp" />
+	    <put-attribute name="scripts" value="/WEB-INF/views/tiles/scripts.jsp" />
+	  </definition>
+	  
+	  <definition name="login" extends="template">
+	  	<put-attribute name="title" value="login ballade" />
+	  	<put-attribute name="left" value="/WEB-INF/views/login/empty.jsp" />
+	  	<put-attribute name="right" value="/WEB-INF/views/login/login.jsp" />
+	  </definition>
+	  
+	  <definition name="homeTemplate" extends="template">
+	  	<put-attribute name="scripts" value="/WEB-INF/views/home/homeScripts.jsp" />
+	  </definition>
+	  
+	  <definition name="home" extends="homeTemplate">
+	  	<put-attribute name="title" value="ballade home" />
+	  	<put-attribute name="left" value="/WEB-INF/views/login/empty.jsp" />
+	  	<put-attribute name="right" value="/WEB-INF/views/home/right.jsp" />
+	  </definition>
+	  
+	  <definition name="calendar/show" extends="homeTemplate">
+	  	<put-attribute name="title" value="show calendar" />
+	  	<put-attribute name="left" value="/WEB-INF/views/home/calendarShow.jsp" />
+	  	<put-attribute name="right" value="/WEB-INF/views/home/right.jsp" />
+	  </definition>
+	  
+	  <definition name="score/select" extends="homeTemplate">
+	  	<put-attribute name="title" value="search scores" />
+	  	<put-attribute name="left" value="/WEB-INF/views/home/scoreSelect.jsp" />
+	  	<put-attribute name="right" value="/WEB-INF/views/home/right.jsp" />
+	  </definition>
+	  
+	  <definition name="score/show" extends="homeTemplate">
+	  	<put-attribute name="title" value="show score" />
+	  	<put-attribute name="left" value="/WEB-INF/views/home/scoreShow.jsp" />
+	  	<put-attribute name="right" value="/WEB-INF/views/home/right.jsp" />
+	  </definition>
+	  
+	  <definition name="rate" extends="homeTemplate">
+	  	<put-attribute name="title" value="rate table" />
+	  	<put-attribute name="left" value="/WEB-INF/views/home/rateTableShow.jsp" />
+	  	<put-attribute name="right" value="/WEB-INF/views/home/right.jsp" />
+	  </definition>
+	  
+	  <definition name="rate/finish" extends="homeTemplate">
+	  	<put-attribute name="title" value="rate finish" />
+	  	<put-attribute name="left" value="/WEB-INF/views/home/rateFinish.jsp" />
+	  	<put-attribute name="right" value="/WEB-INF/views/home/right.jsp" />
+	  </definition>
+</tiles-definitions> 

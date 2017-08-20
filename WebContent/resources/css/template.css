@@ -1,0 +1,246 @@
+@CHARSET "UTF-8";
+
+body
+{
+	background-image:url(../img/loginBack.png);
+	background-repeat:no-repeat;
+	width:95%;
+    background-size:100% 100%;
+}
+
+#right
+{
+	float:right;
+	width:270px;
+	height:660px;
+}
+
+#left
+{
+	width:970px;
+}
+
+#loginSubmit
+{
+	background-color:#31C4F9;
+	color:#F4F8F9;
+	border:1px solid #0381AA;
+}
+
+.loginInput
+{
+	width:250px;
+	height:30px;
+}
+
+.rightIndex
+{
+	margin-top:200px;
+}
+
+#rememberMe
+{
+	font-size:0.7em;
+}
+
+.headerText
+{
+	color:black;
+	font-style:italic;
+}
+
+#homeDiv
+{
+	height:600px;
+	width:270px;
+}
+
+#homeIndex
+{
+	position:relative;
+}
+
+#logout
+{
+	position:absolute;
+	right:0px;
+	left:auto;
+}
+
+#logout:hover
+{
+	color:#D30E50;
+}
+
+#homeIndex table
+{
+	margin-top:180px;
+	left:0px;
+	right:0px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#homeIndex table tr
+{
+	height:50px;
+}
+
+#homeIndex table td
+{
+	width:170px;
+	height:50px;
+	text-align:center;
+}
+
+.function
+{
+	font-size:1.0em;
+	height:50px;
+}
+
+#funcCalendar
+{
+	background-color:#F9209B;
+}
+
+#funcScore
+{
+	background-color:#0EA8F4;
+}
+
+#funcRate
+{
+	background-color:#1BBA88;
+}
+
+.funcA
+{
+	color:white;
+	text-decoration:none;
+	line-height:50px;
+	padding:10px 30px 10px 30px;
+}
+
+#calendarForm
+{
+	margin-left:50px;
+}
+
+#calendarTable
+{
+	border:solid #B2AEAE;
+	border-width:0px 0px 1px 1px;
+	font-size:0.9em;
+	width:920px;
+}
+
+#calendarTable th
+{
+	border:solid #B2AEAE;
+	border-width:1px 1px 0px 0px;
+	font-size:1.2em;
+}
+
+#calendarTable td
+{
+	border:solid #B2AEAE;
+	border-width:1px 1px 0px 0px;
+}
+
+#calendarTable table td
+{
+	border-width:0px 0px 0px 0px;
+}
+
+.lessonTime
+{
+	font-style:italic;
+}
+
+.calendarInfo
+{
+	margin-left:30px;
+}
+
+.nowDay
+{
+	color:#6B1696;
+}
+
+.toBeDoneLesson
+{
+	color:#6B1696;
+}
+
+.scoreLabel
+{
+	margin-left:30px;
+}
+
+.scoreTd
+{
+	text-align:center;
+}
+
+#exportA
+{
+	color:black;
+	font-style:italic;
+	font-size:0.9em;
+	margin-left:200px;
+}
+
+#exportA:hover
+{
+	color:#6B1F38;
+}
+
+.partNum
+{
+	width:40px;
+}
+
+#error
+{
+	display:none;
+	width:0px;
+	height:0px;
+	padding:0px;
+	margin:0px;
+}
+
+#title
+{
+	color:#041E72;
+	font-size:1.3em;
+}
+
+#myName
+{
+	color:#6B1F38;
+}
+
+#return
+{
+	color:#ba63c6;
+}
+
+#okImg
+{
+	width:90px;
+	height:90px;
+}
+
+#finishTable
+{
+	height:250px;
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#tableDiv
+{
+	width:920px;
+}
