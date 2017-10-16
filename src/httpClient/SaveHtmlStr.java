@@ -1,6 +1,5 @@
 package httpClient;
 
-import java.io.File;
 import java.util.List;
 
 public interface SaveHtmlStr {

@@ -14,7 +14,7 @@
 	<div id="right">
 		<div id="homeDiv">
 		<div id="homeIndex">
-		<span class="headerText" id="name">Hi,<span id="myName">${name }</span></span>
+		<span class="headerText" id="name">Hi, <span id="myName">${name }</span></span>
 		<a id="logout" class="headerText" href="<s:url value='/static/j_spring_security_logout' />">登出</a>
 		<table id="funcTable">
 		<c:if test="${nowWeek > 0 }"><c:set var="week" value="${nowWeek }" /></c:if>

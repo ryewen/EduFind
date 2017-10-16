@@ -12,6 +12,7 @@ public class DealHtmlStrException extends Exception {
 		this.error = error;
 	}
 	
+	@Override
 	public String toString() {
 		return error;
 	}

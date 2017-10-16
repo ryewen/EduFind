@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 import httpClient.post.param.object.RateBeginPagePostParams;
 import teachnet.info.object.InfoObject;
-import teachnet.info.object.lesson.Lesson;
 import teachnet.info.object.rateLesson.RateLesson;
 import teachnet.info.object.rateLesson.RateScore;
 

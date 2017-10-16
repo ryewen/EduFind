@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
-
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.cookie.Cookie;
 import org.springframework.context.ApplicationContext;

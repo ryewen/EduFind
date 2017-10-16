@@ -26,12 +26,14 @@ public class LessonDetailConverterImpl implements LessonDetailConverter {
 	private static final String[] NEW_CLASS_END_TIME = {"9:15 AM", "10:10 AM", "11:15 AM", "12:10 AM", "2:45 PM",
 			"3:40 PM", "4:45 PM", "5:40 PM", "7:45 PM", "8:40 PM", "9:35PM", "10:30PM"};
 	
+	@Override
 	public List<Lesson> convertDetail(Lesson lesson, int year, int month, int date) {
 		convertName(lesson);
 		convertTime(lesson);
 		return convertDate(lesson, year, month, date);
 	}
 	
+	@Override
 	public void convertName(Lesson lesson) {
 		String name = lesson.getName();
 		String[] nameStrs = name.split("]");
@@ -44,6 +46,7 @@ public class LessonDetailConverterImpl implements LessonDetailConverter {
 		lesson.setShortName(shortName);
 	}
 	
+	@Override
 	public void convertTime(Lesson lesson) {
 		String partTimes = lesson.getPartTimes();
 		try {
@@ -89,6 +92,7 @@ public class LessonDetailConverterImpl implements LessonDetailConverter {
 		}
 	}
 	
+	@Override
 	public List<Lesson> convertDate(Lesson lesson, int year, int month, int date) {
 		List<Lesson> lessons = new LinkedList<Lesson>();
 		String[] weekStrs = lesson.getWeekTimes().split(",");
@@ -123,6 +127,7 @@ public class LessonDetailConverterImpl implements LessonDetailConverter {
 		return lessons;
 	}
 	
+	@Override
 	public void convertXYIndex(Lesson lesson, List<String> dates) {
 		Iterator<String> it = dates.iterator();
 		int i = 0;

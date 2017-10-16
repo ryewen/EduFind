@@ -16,6 +16,7 @@ public class SaveHtmlStrSupport implements SaveHtmlStr {
 	
 	protected String TD_ERROR_BEGIN_SIGN = "error"; //just example
 	
+	@Override
 	public List<List<String>> saveHtmlIntoLists(String html) throws DealHtmlStrException {
 		return recSaveHtmlIntoLists(html);
 	}
@@ -82,7 +83,11 @@ public class SaveHtmlStrSupport implements SaveHtmlStr {
 		return tableStrs;
 	}
 	
-	public static String getValue(String htmlStr, String leftStr, String rightStr) {
-		return htmlStr.substring(htmlStr.indexOf(leftStr) + leftStr.length(), htmlStr.indexOf(rightStr));
+	public static String getValue(String htmlStr, String leftStr, String rightStr) throws DealHtmlStrException {
+		try {
+			return htmlStr.substring(htmlStr.indexOf(leftStr) + leftStr.length(), htmlStr.indexOf(rightStr));
+		} catch (StringIndexOutOfBoundsException e) {
+			throw new DealHtmlStrException();
+		}
 	}
 }

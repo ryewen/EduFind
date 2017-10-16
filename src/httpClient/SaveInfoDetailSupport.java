@@ -16,6 +16,7 @@ public abstract class SaveInfoDetailSupport implements SaveInfoDetail {
 	@Autowired
 	private TeachNetHttpClient httpClient;
 	
+	@Override
 	public List<InfoObject> getLessonsAndDetails(List<Cookie> cookies, String tableUrl,
 			Map<String, String> queryPostParams) throws IOException, DealHtmlStrException {
 		String html = httpClient.saveTableHtmlStr(cookies, tableUrl, queryPostParams);

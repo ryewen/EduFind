@@ -70,6 +70,7 @@ public class RatePagePostParams implements PagePostParams {
 	
 	private Map<String, String> specialPostParams = new HashMap<String, String>();
 	
+	@Override
 	public Map<String, String> getPostParams() {
 		Set<Entry<String, String>> entrys1 = commonPostParams.entrySet();
 		Set<Entry<String, String>> entrys2 = specialPostParams.entrySet();

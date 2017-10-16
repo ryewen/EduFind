@@ -1,18 +1,7 @@
 package controller;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,9 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.http.cookie.Cookie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,14 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import dao.SaveExcelDAO;
-import dao.StudentDAO;
 import httpClient.DealHtmlStrException;
-import httpClient.GetNameStr;
 import httpClient.SaveInfoDetail;
-import httpClient.SaveLessonDetailImpl;
-import httpClient.TeachNetHttpClient;
 import httpClient.post.param.object.LessonPagePostParams;
-import httpClient.post.param.object.ScorePagePostParams;
 import service.CalendarShow;
 import service.RateTableShow;
 import service.ScoreShow;
@@ -46,10 +27,6 @@ import service.SendRateDetails;
 import service.YearWeekGetter;
 import service.exception.ParamException;
 import teachnet.info.object.InfoObject;
-import teachnet.info.object.lesson.Lesson;
-import teachnet.info.object.lesson.LessonDetailConverter;
-import teachnet.info.object.rateLesson.RateScore;
-import teachnet.info.object.score.Score;
 
 @Controller
 public class HomeController {
@@ -91,6 +68,7 @@ public class HomeController {
 	@RequestMapping("/home")
 	public String showHomePage(Model model, HttpServletRequest request) {
 		request.getSession().setAttribute("nowWeek", YearWeekGetter.getNowWeek(BEGIN_YEAR, BEGIN_MONTH, BEGIN_DAY));
+		System.out.println();
 		return "home";
 	}
 	

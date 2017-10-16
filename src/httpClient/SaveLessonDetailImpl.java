@@ -38,10 +38,12 @@ public class SaveLessonDetailImpl extends SaveInfoDetailSupport {
 	@Qualifier("saveLessonHtmlStrImpl")
 	private SaveHtmlStr saveHtmlStr;
 	
+	@Override
 	protected SaveHtmlStr getSaveHtmlStr() {
 		return saveHtmlStr;
 	}
 	
+	@Override
 	protected List<InfoObject> getOneListObjectsAndDetails(List<String> objectsStrs) {
 		List<InfoObject> lessons = new LinkedList<InfoObject>();
 		Map<String, Integer> detailNameAndIndex = getDetailKindAndIndex(objectsStrs);
@@ -82,6 +84,7 @@ public class SaveLessonDetailImpl extends SaveInfoDetailSupport {
 		return lessons;
 	}
 	
+	@Override
 	protected Map<String, Integer> getDetailKindAndIndex(List<String> objectsStrs) {
 		Map<String, Integer> detailNameAndIndex = new HashMap<String, Integer>();
 		Iterator<String> it = objectsStrs.iterator();

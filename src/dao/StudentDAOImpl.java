@@ -22,6 +22,7 @@ public class StudentDAOImpl extends JdbcTemplateSupport implements StudentDAO {
 	public void saveStudent(String username, String password) {
 		try {
 			Student student = getJdbcTemplate().queryForObject(SQL_QUERY_STUDENT, new ParameterizedRowMapper<Student>() {
+				@Override
 				public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
 					Student student = new Student();
 					student.setUsername(rs.getString(1));

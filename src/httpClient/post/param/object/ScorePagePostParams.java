@@ -31,6 +31,7 @@ public class ScorePagePostParams implements PagePostParams {
 		this.term = term;
 	}
 	
+	@Override
 	public Map<String, String> getPostParams() {
 		Map<String, String> postParams = new HashMap<String, String>();
 		for(int i = 0; i < FIXED_PARAM_NAMES.length; i ++) {

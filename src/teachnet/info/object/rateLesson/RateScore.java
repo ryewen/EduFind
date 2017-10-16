@@ -43,6 +43,7 @@ public class RateScore {
 		this.words = words;
 	}
 	
+	@Override
 	public boolean equals(Object o) {
 		if(o == null) return false;
 		if(o == this) return true;

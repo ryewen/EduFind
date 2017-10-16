@@ -34,10 +34,12 @@ public class SaveScoreDetailImpl extends SaveInfoDetailSupport {
 	@Qualifier("saveScoreHtmlStrImpl")
 	private SaveHtmlStr saveHtmlStr;
 	
+	@Override
 	protected SaveHtmlStr getSaveHtmlStr() {
 		return saveHtmlStr;
 	}
 	
+	@Override
 	protected List<InfoObject> getOneListObjectsAndDetails(List<String> objectsStrs){
 		List<InfoObject> scores = new LinkedList<InfoObject>();
 		Map<String, Integer> detailNameAndIndex = getDetailKindAndIndex(objectsStrs);
@@ -69,6 +71,7 @@ public class SaveScoreDetailImpl extends SaveInfoDetailSupport {
 		return scores;
 	}
 	
+	@Override
 	protected Map<String, Integer> getDetailKindAndIndex(List<String> objectsStrs) {
 		Map<String, Integer> detailNameAndIndex = new HashMap<String, Integer>();
 		Iterator<String> it = objectsStrs.iterator();
